@@ -4,7 +4,7 @@ export default function WeatherDisplay({ temp }) {
     <div>
       <span>
       <p style={{ color: temp.temperature > 20 ? "red" : "blue" }}>
-        {temp.temperature}
+        Temperature: {temp.temperature}
       </p>
       <p>{temp.conditions}</p>
       </span>
