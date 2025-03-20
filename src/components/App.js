@@ -6,7 +6,7 @@ const App = () => {
   const [temp, setTemp] = useState({ temperature: 0, conditions: "" });
 
   useEffect(() => {
-    setTemp({ temperature: 20, conditions: "Sunny" });
+    setTemp({ temperature: 25, conditions: "Sunny" });
   }, []);
 
   return (
