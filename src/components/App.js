@@ -1,13 +1,19 @@
-
-import React from "react";
-import './../styles/App.css';
+import React, { Component, useEffect, useState } from "react";
+import WeatherDisplay from "./WeatherDisplay";
+import '../styles/App.css';
 
 const App = () => {
-  return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
-  )
-}
+  const [temp, setTemp] = useState({ temperature: 0, conditions: "" });
 
-export default App
+  useEffect(() => {
+    setTemp({ temperature: 20, conditions: "Sunny" });
+  }, []);
+
+  return (
+    <div id="main">
+      <WeatherDisplay temp={temp} />
+    </div>
+  );
+};
+
+export default App;
